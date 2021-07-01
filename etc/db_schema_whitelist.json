@@ -1,0 +1,13 @@
+{
+    "template_entity": {
+        "column": {
+            "entity_id": true,
+            "attribute_one": true,
+            "attribute_two": true,
+            "attribute_three": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Tada\TemplateEntity\Api\Data\TemplateEntityInterface"
+                type="Tada\TemplateEntity\Model\TemplateEntity" />
+    <preference for="Tada\TemplateEntity\Api\TemplateEntityRepositoryInterface"
+                type="Tada\TemplateEntity\Model\TemplateEntityRepository" />
+
+</config>

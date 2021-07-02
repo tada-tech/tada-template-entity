@@ -42,6 +42,7 @@ class TemplateEntityRepository implements TemplateEntityRepositoryInterface
                 __('Unable to save new $object. Error: %1', $e->getMessage())
             );
         }
+        return $object;
     }
 
     public function get($entityId)

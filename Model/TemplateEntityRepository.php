@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Tada\TemplateEntity\Model;
 
@@ -15,9 +16,8 @@ class TemplateEntityRepository implements TemplateEntityRepositoryInterface
     public function __construct(
         \Tada\TemplateEntity\Model\ResourceModel\TemplateEntity $resourceModel,
         \Tada\TemplateEntity\Model\TemplateEntityFactory $modelFactory,
-        \Tada\TemplateEnity\Model\ResourceModel\TemplateEntity\CollectionFactory $collectionFactory
-    )
-    {
+        \Tada\TemplateEntity\Model\ResourceModel\TemplateEntity\CollectionFactory $collectionFactory
+    ) {
         $this->resourceModel = $resourceModel;
         $this->modelFactory = $modelFactory;
         $this->collectionFactory = $collectionFactory;
@@ -27,8 +27,7 @@ class TemplateEntityRepository implements TemplateEntityRepositoryInterface
     {
         try {
             $this->resourceModel->save($object);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             if ($object->getEntityId()) {
                 throw new CouldNotSaveException(
                     __(
@@ -59,5 +58,18 @@ class TemplateEntityRepository implements TemplateEntityRepositoryInterface
     {
         $collection = $this->collectionFactory->create();
         return $collection;
+    }
+
+    public function delete(TemplateEntityInterface $object)
+    {
+        return $this->deleteById($object->getEntityId());
+    }
+
+    protected function deleteById($id)
+    {
+        $model = $this->modelFactory->create();
+        $this->resourceModel->load($model, $id);
+        $this->resourceModel->delete($model);
+        return true;
     }
 }

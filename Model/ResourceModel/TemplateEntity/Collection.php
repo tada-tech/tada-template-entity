@@ -1,17 +1,12 @@
 <?php
+declare(strict_types=1);
 
-namespace Tada\TemplateEnity\Model\ResourceModel\TemplateEntity;
+namespace Tada\TemplateEntity\Model\ResourceModel\TemplateEntity;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Tada\TemplateEntity\Model\ResourceModel\TemplateEntity as ResourceModel;
 use Tada\TemplateEntity\Model\TemplateEntity as Model;
 
-
-/**
- * Class Collection
- * @package Central\LineItem\Model\ResourceModel\OrderLineItem
- * @codeCoverageIgnore
- */
 class Collection extends AbstractCollection
 {
     /**

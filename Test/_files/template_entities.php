@@ -1,6 +1,7 @@
 <?php
-use Magento\TestFramework\Helper\Bootstrap;
+declare(strict_types=1);
 
+use Magento\TestFramework\Helper\Bootstrap;
 
 $objectManager = Bootstrap::getObjectManager();
 
@@ -8,11 +9,11 @@ $templateEntityFactory = $objectManager->get(\Tada\TemplateEntity\Api\Data\Templ
 $templateEntityRepository = $objectManager->get(\Tada\TemplateEntity\Api\TemplateEntityRepositoryInterface::class);
 
 $data = [
-    'attribute_one' => "Nghia Dang",
+    'attribute_one' => "Attribute Number One",
     'attribute_two' => 10,
-    'attribute_three' => 23.5
+    'attribute_three' => 23.53
 ];
 
-$entity = $templateEntityFactory->create(['data' => $data]);
+$entity = $templateEntityFactory->create();
+$entity->setData($data);
 $templateEntityRepository->save($entity);
-

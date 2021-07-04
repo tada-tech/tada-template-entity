@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace Tada\TemplateEntity\Api;
 
 use Tada\TemplateEntity\Api\Data\TemplateEntityInterface;
@@ -21,4 +23,10 @@ interface TemplateEntityRepositoryInterface
      * @return TemplateEntityInterface[]
      */
     public function getList();
+
+    /**
+     * @param TemplateEntityInterface $object
+     * @return boolean
+     */
+    public function delete(TemplateEntityInterface $object);
 }

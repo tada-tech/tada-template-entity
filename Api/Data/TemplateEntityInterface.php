@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace Tada\TemplateEntity\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;

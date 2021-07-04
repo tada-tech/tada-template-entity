@@ -1,15 +1,14 @@
 <?php
+declare(strict_types=1);
 
 namespace Tada\TemplateEntity\Test\Unit\Model;
 
 use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
 use PHPUnit\Framework\TestCase;
 use Mockery;
-
-use Tada\TemplateEntity\Api\Data\TemplateEntityInterface;
 use Tada\TemplateEntity\Model\ResourceModel\TemplateEntity;
 use Tada\TemplateEntity\Model\TemplateEntityFactory;
-use Tada\TemplateEnity\Model\ResourceModel\TemplateEntity\CollectionFactory;
+use Tada\TemplateEntity\Model\ResourceModel\TemplateEntity\CollectionFactory;
 use Tada\TemplateEntity\Model\TemplateEntityRepository;
 
 class TemplateEntityRepositoryTest extends TestCase

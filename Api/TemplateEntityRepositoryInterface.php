@@ -3,7 +3,11 @@ declare(strict_types=1);
 
 namespace Tada\TemplateEntity\Api;
 
+use Magento\Framework\Api\SearchCriteriaInterface;
+use Magento\Framework\Exception\NoSuchEntityException;
 use Tada\TemplateEntity\Api\Data\TemplateEntityInterface;
+use Tada\TemplateEntity\Api\Data\TemplateEntitySearchResultInterface;
+use Tada\TemplateEntity\Model\TemplateEntity;
 
 interface TemplateEntityRepositoryInterface
 {
@@ -15,18 +19,22 @@ interface TemplateEntityRepositoryInterface
 
     /**
      * @param int $entityId
-     * @return TemplateEntityInterface
+     * @param bool $forceReload
+     * @return TemplateEntityInterface|TemplateEntity
+     * @throws NoSuchEntityException
      */
-    public function get($entityId);
+    public function get(int $entityId, bool $forceReload = false);
 
     /**
-     * @return TemplateEntityInterface[]
+     * @param SearchCriteriaInterface $searchCriteria
+     * @return TemplateEntitySearchResultInterface
      */
-    public function getList();
+    public function getList(SearchCriteriaInterface $searchCriteria);
 
     /**
      * @param TemplateEntityInterface $object
-     * @return boolean
+     * @return bool
+     * @throws \Exception
      */
     public function delete(TemplateEntityInterface $object);
 }

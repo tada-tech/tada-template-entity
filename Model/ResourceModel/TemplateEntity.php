@@ -9,6 +9,9 @@ use Tada\TemplateEntity\Api\Data\TemplateEntityInterface;
 class TemplateEntity extends AbstractDb
 {
 
+    /**
+     * @inheridoc
+     */
     protected function _construct()
     {
         $this->_init(

@@ -19,7 +19,7 @@ interface TemplateEntityInterface extends ExtensibleDataInterface
     public function getEntityId();
 
     /**
-     * @param $value
+     * @param int $value
      * @return $this
      */
     public function setEntityId($value);
@@ -30,10 +30,10 @@ interface TemplateEntityInterface extends ExtensibleDataInterface
     public function getAttributeOne();
 
     /**
-     * @param $value
+     * @param string $value
      * @return $this
      */
-    public function setAttributeOne($value);
+    public function setAttributeOne(string $value);
 
     /**
      * @return float
@@ -41,10 +41,10 @@ interface TemplateEntityInterface extends ExtensibleDataInterface
     public function getAttributeTwo();
 
     /**
-     * @param $value
+     * @param float $value
      * @return $this
      */
-    public function setAttributeTwo($value);
+    public function setAttributeTwo(float $value);
 
     /**
      * @return int
@@ -52,8 +52,23 @@ interface TemplateEntityInterface extends ExtensibleDataInterface
     public function getAttributeThree();
 
     /**
-     * @param $value
+     * @param int $value
      * @return $this
      */
-    public function setAttributeThree($value);
+    public function setAttributeThree(int $value);
+
+    /**
+     * Retrieve existing extension attributes object or create a new one.
+     *
+     * @return \Tada\TemplateEntity\Api\Data\TemplateEntityExtensionInterface|null
+     */
+    public function getExtensionAttributes();
+
+    /**
+     * Set an extension attributes object.
+     *
+     * @param \Tada\TemplateEntity\Api\Data\TemplateEntityExtensionInterface $extensionAttributes
+     * @return $this
+     */
+    public function setExtensionAttributes(TemplateEntityExtensionInterface $extensionAttributes);
 }

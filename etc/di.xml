@@ -5,5 +5,7 @@
                 type="Tada\TemplateEntity\Model\TemplateEntity" />
     <preference for="Tada\TemplateEntity\Api\TemplateEntityRepositoryInterface"
                 type="Tada\TemplateEntity\Model\TemplateEntityRepository" />
+    <preference for="Tada\TemplateEntity\Api\Data\TemplateEntitySearchResultInterface"
+                type="Magento\Framework\Api\SearchResultsInterface" />
 
 </config>

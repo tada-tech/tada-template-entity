@@ -1,0 +1,16 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+System_Boundary(magentoContainer, "Magento") {
+    Container(otherModules, "Other Modules", "Magento Modules")
+    Container_Boundary(test,"Tada_TemplateEntity") {
+        Component(entityRepository, "TemplateEntityRepositoryInterface", "Entity Repository")
+        Component(entityFactory, "TemplateEntityInterfaceFactory", "Entity Factory")
+    }
+    ContainerDb(magentoDb, "Magento", "MySQL")
+}
+
+Rel(otherModules, entityRepository, "Use")
+Rel(entityRepository, magentoDb, "Use")
+Rel(otherModules, entityFactory, "Use")
+@enduml

@@ -10,6 +10,14 @@ use Tada\TemplateEntity\Api\Data\TemplateEntityExtensionInterface;
 
 class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityInterface
 {
+
+    /**
+     * Prefix of model events names
+     *
+     * @var string
+     */
+    protected $_eventPrefix = 'template_entity';
+
     /**
      * @inheridoc
      */

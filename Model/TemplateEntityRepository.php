@@ -147,14 +147,14 @@ class TemplateEntityRepository implements TemplateEntityRepositoryInterface
 
     /**
      * @param TemplateEntityInterface $object
-     * @return bool
+     * @return TemplateEntityInterface
      * @throws \Exception
      */
-    public function delete(TemplateEntityInterface $object)
+    public function delete(TemplateEntityInterface $object): TemplateEntityInterface
     {
         $entityId = $object->getEntityId();
         unset($this->registry[$entityId]);
         $this->resourceModel->delete($object);
-        return true;
+        return $object;
     }
 }

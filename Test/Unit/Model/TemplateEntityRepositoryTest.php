@@ -8,6 +8,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
 use PHPUnit\Framework\TestCase;
 use Mockery;
+use Tada\TemplateEntity\Api\Data\TemplateEntityInterface;
 use Tada\TemplateEntity\Api\Data\TemplateEntitySearchResultInterface;
 use Tada\TemplateEntity\Model\ResourceModel\TemplateEntity;
 use Tada\TemplateEntity\Model\TemplateEntityFactory;
@@ -176,11 +177,12 @@ class TemplateEntityRepositoryTest extends TestCase
         $object = Mockery::mock(\Tada\TemplateEntity\Model\TemplateEntity::class);
         $object->shouldReceive('getEntityId')
             ->andReturn(1);
-        $this->resourceModel->shouldReceive('delete')
+        $this->resourceModel
+            ->shouldReceive('delete')
             ->with($object)
             ->andReturnSelf();
         $result = $this->templateEntityRepository->delete($object);
-        $this->assertTrue($result);
+        $this->assertInstanceOf(TemplateEntityInterface::class, $result);
     }
 
     public function testGetList()

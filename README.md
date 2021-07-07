@@ -23,7 +23,7 @@ Replace Instruction:
  - Replacing in files of \<ModuleName> folder :
     - TemplateEntity to \<ModuleName> : replace module name, and namespace
     - Tada_TemplateEntity to \<Vendor>_\<ModuleName> : replace Registration's module name.
-    - template_entity to \<module_name> : replace table name
+    - template_entity to \<module_name> : replace table name, and $_eventPrefix="template_entity" in model class
  - Rename some files below: 
     - Api folder: 
         - Data/TemplateEntityInterface.php to Data/\<ModuleName>Interface.php

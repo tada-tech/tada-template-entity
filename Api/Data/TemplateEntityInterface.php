@@ -7,7 +7,7 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 
 interface TemplateEntityInterface extends ExtensibleDataInterface
 {
-    const TBL_NAME = 'template_entity';
+    const TBL_NAME = 'tada_template_entity';
     const ENTITY_ID = 'entity_id';
     const ATTRIBUTE_ONE = 'attribute_one';
     const ATTRIBUTE_TWO = 'attribute_two';

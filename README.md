@@ -23,7 +23,8 @@ Replace Instruction:
  - Replacing in files of \<ModuleName> folder :
     - TemplateEntity to \<ModuleName> : replace module name, and namespace
     - Tada_TemplateEntity to \<Vendor>_\<ModuleName> : replace Registration's module name.
-    - template_entity to \<module_name> : replace table name, and $_eventPrefix="template_entity" in model class
+    - template_entity to \<module_name> : replac $_eventPrefix="template_entity" in model class
+    - tada_template_entity to tada_\<module_name> : replace table name
  - Rename some files below: 
     - Api folder: 
         - Data/TemplateEntityInterface.php to Data/\<ModuleName>Interface.php
@@ -39,7 +40,7 @@ Replace Instruction:
         - Unit folder:
             - rename TemplateEntityRepositoryTest.php to \<ModuleName>RepositoryTest.php
    - Replace name attribute in composer.json:
-        - tada/template-entity to <vendor>/<module-name>
+        - tada/template-entity to \<vendor>/<module-name>
 
 
 # Changelog

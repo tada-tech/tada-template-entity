@@ -23,7 +23,7 @@ interface TemplateEntityRepositoryInterface
      * @return TemplateEntityInterface|TemplateEntity
      * @throws NoSuchEntityException
      */
-    public function get(int $entityId, bool $forceReload = false);
+    public function get(int $entityId, bool $forceReload = true);
 
     /**
      * @param SearchCriteriaInterface $searchCriteria

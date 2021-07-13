@@ -1,5 +1,5 @@
 {
-    "template_entity": {
+    "tada_template_entity": {
         "column": {
             "entity_id": true,
             "attribute_one": true,

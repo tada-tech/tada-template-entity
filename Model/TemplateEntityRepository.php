@@ -127,7 +127,7 @@ class TemplateEntityRepository implements TemplateEntityRepositoryInterface
      * @return TemplateEntityInterface|TemplateEntity
      * @throws NoSuchEntityException
      */
-    public function get(int $entityId, bool $forceReload = false)
+    public function get(int $entityId, bool $forceReload = true)
     {
         if (isset($this->registry[$entityId]) && !$forceReload) {
             return $this->registry[$entityId];

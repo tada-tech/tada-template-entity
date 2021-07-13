@@ -8,7 +8,6 @@ use Tada\TemplateEntity\Api\Data\TemplateEntityInterface;
 
 class TemplateEntity extends AbstractDb
 {
-
     /**
      * @inheridoc
      */

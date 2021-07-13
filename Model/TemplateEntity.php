@@ -10,7 +10,6 @@ use Tada\TemplateEntity\Api\Data\TemplateEntityExtensionInterface;
 
 class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityInterface
 {
-
     /**
      * Prefix of model events names
      *
@@ -44,7 +43,7 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
     }
 
     /**
-     * @return mixed|string|null
+     * @return string
      */
     public function getAttributeOne()
     {
@@ -53,7 +52,7 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
 
     /**
      * @param string $value
-     * @return TemplateEntity|void
+     * @return $this
      */
     public function setAttributeOne(string $value)
     {
@@ -61,7 +60,7 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
     }
 
     /**
-     * @return float|mixed|null
+     * @return float
      */
     public function getAttributeTwo()
     {
@@ -70,7 +69,7 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
 
     /**
      * @param float $value
-     * @return TemplateEntity|void
+     * @return $this
      */
     public function setAttributeTwo(float $value)
     {
@@ -78,7 +77,7 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
     }
 
     /**
-     * @return int|mixed|null
+     * @return int
      */
     public function getAttributeThree()
     {
@@ -87,7 +86,7 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
 
     /**
      * @param int $value
-     * @return TemplateEntity|void
+     * @return $this
      */
     public function setAttributeThree(int $value)
     {

@@ -24,7 +24,7 @@ Replace Instruction:
     - TemplateEntity to \<ModuleName> : replace module name, and namespace
     - Tada_TemplateEntity to \<Vendor>_\<ModuleName> : replace Registration's module name.
     - template_entity to \<module_name> : replac $_eventPrefix="template_entity" in model class
-    - tada_template_entity to tada_\<module_name> : replace table name
+    - tada_template_entity to \<vendor>_\<module_name> : replace table name
  - Rename some files below: 
     - Api folder: 
         - Data/TemplateEntityInterface.php to Data/\<ModuleName>Interface.php

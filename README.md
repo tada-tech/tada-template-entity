@@ -37,6 +37,7 @@ Replace Instruction:
    - Test folder:
         - Integration folder:
             - rename TemplateEntityRepositoryTest.php to \<ModuleName>RepositoryTest.php
+            - rename TemplateEntityTest.php to \<ModuleName>Test.php
         - Unit folder:
             - rename TemplateEntityRepositoryTest.php to \<ModuleName>RepositoryTest.php
    - Replace name attribute in composer.json:

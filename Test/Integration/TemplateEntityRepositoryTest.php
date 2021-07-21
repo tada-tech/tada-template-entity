@@ -32,7 +32,6 @@ class TemplateEntityRepositoryTest extends TestCase
 
     protected function setUp()
     {
-        parent::setUp();
         $this->templateEntityRepository = Bootstrap::getObjectManager()->get(TemplateEntityRepositoryInterface::class);
         $this->searchCriteriaBuilder = Bootstrap::getObjectManager()->get(SearchCriteriaBuilder::class);
         $this->templateEntityFactory = Bootstrap::getObjectManager()->get(TemplateEntityFactory::class);

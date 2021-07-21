@@ -111,6 +111,6 @@ class TemplateEntity extends AbstractExtensibleModel implements TemplateEntityIn
      */
     public function setExtensionAttributes(TemplateEntityExtensionInterface $extensionAttributes)
     {
-        return $this->setExtensionAttributes($extensionAttributes);
+        return $this->_setExtensionAttributes($extensionAttributes);
     }
 }
